@@ -20,17 +20,7 @@ interface TeamMember {
 
 const TeamSection: React.FC = () => {
   const teamMembers: TeamMember[] = [
-    {
-      image: "/deivid.jpg",
-      name: "Deivid Abreu",
-      role: "Security Specialist",
-      badges: ["Bug Hunter", "Python", "IA", "Pentest"],
-      description: "Especialista em segurança digital com reconhecimento internacional pela descoberta de vulnerabilidade crítica (CVE-2019-19616).",
-      social: {
-        linkedin: "#",
-        github: "#"
-      }
-    },
+
     {
       image: "/matheus.jpeg", 
       name: "Matheus Baiense",
@@ -42,17 +32,6 @@ const TeamSection: React.FC = () => {
         github: "#"
       }
     },
-    {
-      image: "/leonam.jpeg",
-      name: "Leonam Severo",
-      role: "Marketing & Design Lead",
-      badges: ["Branding", "UX/UI", "Content"],
-      description: "Profissional especializado em marketing, publicidade e experiência do usuário (UX), com expertise em projetos estratégicos e inovadores.",
-      social: {
-        linkedin: "#",
-        github: "#"
-      }
-    }
   ];
 
   return (
