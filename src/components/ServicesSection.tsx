@@ -132,10 +132,11 @@ const services: Service[] = [
     subtitle: "Design Estratégico & Conversivo",
     services: [
       "Criativos para Redes Sociais",
+      "Social Media"
       "Branding & Identidade Visual",
       "Coppywriter",
       "Storytelling",
-      "Social Media"
+      
     ]
   },
   {
