@@ -165,15 +165,15 @@ const services: Service[] = [
   },
   {
     icon: LayoutGrid,
-    category: "Automação",
-    title: "PLATAFORMAS & PROCESSOS",
-    subtitle: "Otimização & Automação",
+    category: "Consultoria de Processos ",
+    title: "PROCESSOS",
+    subtitle: "Analise de processos",
     services: [
-      "Implementação de CRM/ERP",
-      "Integrações Avançadas",
-      "Hubspot & RD Station",
-      "Automação de Vendas",
-      "Soluções Customizadas"
+      "Processo Comercial",
+      "Processo Administrativo ",
+      "",
+      "AProcessos de Gestãp",
+      "Processo Estraetégico"
     ]
   }
 ];
