@@ -32,10 +32,21 @@ const TeamSection: React.FC = () => {
         github: "#"
       }
     },
+    {
+      image: "/matheus.jpeg", 
+      name: "Raquel Baiense",
+      role: "Marketing & Design Criativo",
+      badges: ["Marketing Digital", "Design Gráfico", "Mídias Sociais"],
+      description: "Designer focada em potencializar marcas, através de estratégias criativas de marketing digital para redes sociais.",
+      social: {
+        linkedin: "#",
+        github: "#"
+      }
+    },
   ];
 
   return (
-    <section className="pt-8 pb-20 bg-gradient-to-b from-gray-900 to-gray-950">
+    <section className="pt-20 pb-20 bg-gradient-to-b from-gray-900 to-gray-950">
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <span className="inline-block font-montserrat text-purple-500 font-bold text-sm tracking-wider uppercase mb-3">
@@ -49,7 +60,7 @@ const TeamSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-6">
           {teamMembers.map((member, index) => (
             <div 
               key={member.name}

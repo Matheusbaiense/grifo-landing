@@ -132,7 +132,7 @@ const services: Service[] = [
     subtitle: "Design Estratégico & Conversivo",
     services: [
       "Criativos para Redes Sociais",
-      "Social Media"
+      "Social Media",
       "Branding & Identidade Visual",
       "Coppywriter",
       "Storytelling",
@@ -177,7 +177,7 @@ const ServicesSection: React.FC = () => {
         </div>
 
         <div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8"
           role="list"
         >
           {services.map((service) => (

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  MessageCircle, 
-  FileText, 
-  CheckCircle, 
-  Settings,
-  Calendar,
   LucideIcon
+} from 'lucide-react';
+
+import { 
+  Search, 
+  Lightbulb,
+  Rocket
 } from 'lucide-react';
 
 interface TimelinePoint {
@@ -25,8 +26,7 @@ interface TimelinePointProps {
 }
 
 const TimelinePoint: React.FC<TimelinePointProps> = ({ 
-  title, 
-  description, 
+  title,  
   isLast, 
   isActive, 
   onClick, 
@@ -70,9 +70,21 @@ const TimelinePoint: React.FC<TimelinePointProps> = ({
             <div className="absolute -inset-1 rounded-full bg-purple-500/10 animate-pulse" />
           )}
         </div>
+      </div>
+    </div>
+  );
+};
+
+const TimeText: React.FC<TimelinePointProps> = ({ 
+  title, 
+  description, 
+  isActive, 
+}) => {
+  return (
+    <div className="relative flex-1 flex items-center justify-center">
 
         {/* Card de conteúdo */}
-        <div className={`absolute left-1/2 -translate-x-1/2 w-48 top-20 pt-4
+        <div className={`absolute  left-1/2 -translate-x-1/2 w-48 top-20 pt-4
           transition-all duration-500 ease-out
           ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}
           aria-hidden={!isActive}
@@ -86,10 +98,11 @@ const TimelinePoint: React.FC<TimelinePointProps> = ({
             </p>
           </div>
         </div>
-      </div>
     </div>
   );
 };
+
+
 
 const OnboardingTimeline: React.FC = () => {
   const [activePoint, setActivePoint] = useState(0);
@@ -97,29 +110,19 @@ const OnboardingTimeline: React.FC = () => {
 
   const timelinePoints: TimelinePoint[] = [
     {
-      title: "Briefing Inicial",
-      description: "Entendemos suas necessidades e objetivos de forma profunda",
-      icon: MessageCircle
+      title: "MAPEIA",
+      description: "Análise profunda do cenário e identificação de oportunidades",
+      icon: Search
     },
     {
-      title: "Proposta Personalizada",
-      description: "Desenvolvemos uma solução única para seu negócio",
-      icon: FileText
+      title: "INOVA",
+      description: "Desenvolvimento de soluções criativas e disruptivas",
+      icon: Lightbulb
     },
     {
-      title: "Contratação Simplificada",
-      description: "Processo ágil e transparente de contratação",
-      icon: CheckCircle
-    },
-    {
-      title: "Desenvolvimento Ágil",
-      description: "Execução com atualizações constantes e validações",
-      icon: Settings
-    },
-    {
-      title: "Evolução Contínua",
-      description: "Acompanhamento e otimização dos resultados",
-      icon: Calendar
+      title: "TRANSFORMA",
+      description: "Implementação de mudanças e aceleração de resultados",
+      icon: Rocket
     }
   ];
 
@@ -161,7 +164,7 @@ const OnboardingTimeline: React.FC = () => {
             <div className="absolute inset-0 h-0.5 top-7 -translate-y-px bg-[#1a1f2e]" />
             
             {/* Pontos da timeline */}
-            <div className="relative w-full flex">
+            <div className="relative w-full flex justify-center items-center">
               {timelinePoints.map((point, index) => (
                 <TimelinePoint
                   key={index}
@@ -173,6 +176,23 @@ const OnboardingTimeline: React.FC = () => {
                   onClick={() => handlePointClick(index)}
                 />
               ))}
+              
+            </div>
+            <div 
+              className="absolute left-1/2 -translate-x-1/2 pt-4 transition-all duration-500"
+            >
+              {timelinePoints.map((point, index) => (
+                <TimeText
+                  key={index}
+                  {...point}
+                  index={index}
+                  isLast={index === timelinePoints.length - 1}
+                  isActive={index === activePoint}
+                  isNext={!autoAdvance && index === activePoint + 1}
+                  onClick={() => handlePointClick(index)}
+                />
+              ))}
+              
             </div>
           </div>
         </div>

@@ -127,23 +127,23 @@ const InstitutionalSite: React.FC = () => {
       {/* Main Sections */}
       <Hero />
       
-      <section id="services" className="py-24">
+      <section id="services">
         <ServicesSection />
       </section>
       
-      <section id="timeline" className="py-24">
+      <section id="timeline">
         <OnboardingTimeline />
       </section>
       
-      <section id="team" className="py-24">
+      <section id="team">
         <TeamSection />
       </section>
       
-      <section id="about" className="py-24">
+      <section id="about">
         <About />
       </section>
       
-      <section id="contact" className="py-24">
+      <section id="contact">
         <ContactForm />
       </section>
 

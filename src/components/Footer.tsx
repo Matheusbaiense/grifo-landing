@@ -60,25 +60,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Solutions */}
-          <div>
-            <h4 className="text-white font-semibold mb-3 text-sm">Soluções</h4>
-            <ul className="space-y-2">
-              {mainLinks.map((item) => (
-                <li key={item.name}>
-                  <Link 
-                    href={item.href}
-                    className="text-sm text-gray-400 hover:text-purple-400 transition-colors
-                      flex items-center gap-2"
-                  >
-                    <span className="w-1 h-1 bg-purple-500/50 rounded-full" />
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h4 className="text-white font-semibold mb-3 text-sm">Contato</h4>
@@ -108,6 +89,27 @@ const Footer = () => {
               </a>
             </div>
           </div>
+
+          {/* Solutions */}
+          <div>
+            <h4 className="text-white font-semibold mb-3 text-sm">Soluções</h4>
+            <ul className="space-y-2">
+              {mainLinks.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    href={item.href}
+                    className="text-sm text-gray-400 hover:text-purple-400 transition-colors
+                      flex items-center gap-2"
+                  >
+                    <span className="w-1 h-1 bg-purple-500/50 rounded-full" />
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          
 
           {/* Legal Links */}
           <div>
