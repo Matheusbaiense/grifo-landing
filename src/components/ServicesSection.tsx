@@ -171,9 +171,9 @@ const services: Service[] = [
     services: [
       "Processo Comercial",
       "Processo Administrativo ",
-      "",
-      "AProcessos de Gestãp",
-      "Processo Estraetégico"
+      "Processos de Onboarding",
+      "Processos de Gestãp",
+      "Processo Estratégico"
     ]
   }
 ];
