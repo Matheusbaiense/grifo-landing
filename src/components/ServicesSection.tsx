@@ -98,30 +98,18 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
 };
 
 const services: Service[] = [
-  {
-    icon: Lightbulb,
-    category: "Inovação",
-    title: "ESTRATÉGIA & INOVAÇÃO",
-    subtitle: "Aceleramos sua Transformação Digital",
-    services: [
-      "Consultoria Estratégica Digital",
-      "Planejamento Estratégico Digital",
-      "Transformação Digital",
-      "Consultoria de Inovação",
-      "Gestão de Projetos Digitais"
-    ]
-  },
+
   {
     icon: BarChart,
     category: "Marketing",
     title: "MARKETING & PERFORMANCE",
     subtitle: "Resultados Mensuráveis e Escaláveis",
     services: [
-      "Marketing Digital Integrado",
+      "Tráfego Pago",
+      "Marketing Digital",
       "SEO & Conteúdo Estratégico",
       "Mídia Paga & Performance",
-      "Growth Hacking",
-      "Social Media"
+      "Growth Hacking"      
     ]
   },
   {
@@ -138,29 +126,16 @@ const services: Service[] = [
     ]
   },
   {
-    icon: Code,
-    category: "Tecnologia",
-    title: "TECNOLOGIA & DESENVOLVIMENTO",
-    subtitle: "Soluções Tecnológicas",
-    services: [
-      "Desenvolvimento Web",
-      "E-commerce & Plataformas",
-      "Sistemas Sob Medida",
-      "Aplicações Mobile",
-      "Integrações API"
-    ]
-  },
-  {
     icon: PenTool,
-    category: "Design",
+    category: "Design e Social Media",
     title: "DESIGN & CRIAÇÃO",
     subtitle: "Design Estratégico & Conversivo",
     services: [
-      "UI/UX Design",
+      "Criativos para Redes Sociais",
       "Branding & Identidade Visual",
-      "Motion Design & Vídeo",
-      "Design para Conversão",
-      "Design Systems"
+      "Coppywriter",
+      "Storytelling",
+      "Social Media"
     ]
   },
   {
@@ -172,7 +147,7 @@ const services: Service[] = [
       "Processo Comercial",
       "Processo Administrativo ",
       "Processos de Onboarding",
-      "Processos de Gestãp",
+      "Processos de Gestão",
       "Processo Estratégico"
     ]
   }
