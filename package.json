@@ -2,9 +2,9 @@
     "name": "grifo-landing",
     "version": "1.0.0",
     "scripts": {
-        "dev": "next dev -p 3100",
+        "dev": "next dev",
         "build": "next build",
-        "start": "next start -p 3100",
+        "start": "next start",
         "prod": "next build && next start",
         "lint": "next lint",
         "clean": "rm -rf .next && rm -rf node_modules && npm install",
