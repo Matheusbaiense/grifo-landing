@@ -2,10 +2,8 @@
 
 import React from 'react';
 import { 
-  Lightbulb,
   BarChart,
   Brain,
-  Code,
   PenTool,
   LayoutGrid,
   ArrowRight,
