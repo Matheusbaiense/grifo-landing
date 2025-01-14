@@ -11,7 +11,7 @@ const ServicesSection = dynamic(() => import('./ServicesSection'), { ssr: false 
 const Footer = dynamic(() => import('./Footer'), { ssr: false });
 const About = dynamic(() => import('./About'), { ssr: false });
 const Header = dynamic(() => import('./Header'), { ssr: false });
-const ContactForm = dynamic(() => import('./ContactForm'), { ssr: false });
+// const ContactForm = dynamic(() => import('./ContactForm'), { ssr: false });
 const OnboardingTimeline = dynamic(() => import('./OnboardingTimeline'), { ssr: false });
 const TeamSection = dynamic(() => import('./TeamSection'), { ssr: false });
 
@@ -144,7 +144,9 @@ const InstitutionalSite: React.FC = () => {
       </section>
       
       <section id="contact">
-        <ContactForm />
+        <div className='flex justify-center'>
+          <iframe width="600" height="670" src="https://crm.grifohub.com.br/forms/wtl/28bb7a4aa290b4e09db967738ccb65f4" sandbox="allow-top-navigation allow-forms allow-scripts allow-same-origin allow-popups"></iframe>
+        </div>
       </section>
 
       <WhatsAppButton />

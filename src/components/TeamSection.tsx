@@ -3,7 +3,9 @@ import React from 'react';
 import Image from 'next/image';
 import { 
   Linkedin,
-  Github
+  Github,
+  PenTool,
+  Instagram
 } from 'lucide-react';
 
 interface TeamMember {
@@ -16,6 +18,8 @@ interface TeamMember {
     linkedin: string;
     github: string;
   };
+  github: boolean;
+  pen: boolean;
 }
 
 const TeamSection: React.FC = () => {
@@ -30,10 +34,12 @@ const TeamSection: React.FC = () => {
       social: {
         linkedin: "#",
         github: "#"
-      }
+      },
+      github: true,
+      pen: false
     },
     {
-      image: "/matheus.jpeg", 
+      image: "/raquel.jpg", 
       name: "Raquel Baiense",
       role: "Marketing & Design Criativo",
       badges: ["Marketing Digital", "Design Gráfico", "Mídias Sociais"],
@@ -41,7 +47,9 @@ const TeamSection: React.FC = () => {
       social: {
         linkedin: "#",
         github: "#"
-      }
+      },
+      github: false,
+      pen: true
     },
   ];
 
@@ -60,7 +68,7 @@ const TeamSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
           {teamMembers.map((member, index) => (
             <div 
               key={member.name}
@@ -122,12 +130,34 @@ const TeamSection: React.FC = () => {
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                   aria-label={`GitHub de ${member.name}`}
                 >
+                  <Instagram className="w-5 h-5" />
+                </a>
+                { member.github == true ?
+                <a 
+                  href={member.social.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  aria-label={`GitHub de ${member.name}`}
+                >
                   <Github className="w-5 h-5" />
                 </a>
+                : null}
+                { member.pen == true ?
+                <a 
+                  href={member.social.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  aria-label={`GitHub de ${member.name}`}
+                >
+                  <PenTool className="w-5 h-5" />
+                </a> : null }
               </div>
             </div>
           ))}
         </div>
+        
       </div>
     </section>
   );
